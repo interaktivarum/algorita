@@ -1,0 +1,63 @@
+input{
+  width: 100%;
+  font-size: 18pt;
+  border: 0;
+  text-align: left;
+  border-bottom: 2px solid lightgray;
+  border-radius: 0px;
+  padding: 10px;
+  margin: 5px 0px 5px 0px;
+  box-sizing: border-box;
+  font-weight: bold;
+  transition: all 0.25s;
+  margin: 0;
+  outline: none;
+}
+
+input::placeholder{
+  color: gray;
+}
+
+input:hover,input:focus{
+  border-color: MediumSeaGreen;
+  letter-spacing: 1px;
+}
+
+input:not(:placeholder-shown){
+  background: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: white;
+  letter-spacing: 1px;
+}
+
+input.noBorder{
+  border: 0;
+}
+
+button{
+  font-size: 12pt;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-weight: bold;
+  transition: all 0.25s;
+  background: rgb(230,230,230);
+  cursor: pointer;
+}
+
+button:hover{
+  background: lightgray;
+  border-color: gray;
+}
+
+label{
+  cursor: pointer;
+}
+
+input[type="checkbox"]{
+  width: 20px;
+  margin: 5px;
+  border: 1px solid black;
+  background: lightgray;
+}

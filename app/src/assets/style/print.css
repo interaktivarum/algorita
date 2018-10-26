@@ -1,0 +1,27 @@
+.showInPrint{
+  display: none;
+}
+
+@media print {
+
+  .hideInPrint{
+    display: none !important;
+  }
+
+  .showInPrint{
+    display: inline !important;
+  }
+
+  h1{
+    font-size: 18pt;
+  }
+
+  .center-col{
+    width: 100% !important;
+  }
+
+  input::placeholder{
+    filter: opacity(0);
+  }
+
+}

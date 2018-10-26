@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle:100,300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:100,300,400,500,700');
+
+html,body{
+  margin: 0;
+  padding: 0;
+  font-size: 11pt;
+  height: 100%;
+}
+
+* {
+  font-family: 'Open Sans';
+}
+
+#app{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#app #headerview, #app #footerview{
+  flex: 1 0 auto;
+}
+
+#app #routerview{
+  margin: 20px;
+  flex: 0 1 100%;
+}
+
+a{
+  text-decoration: none;
+  color: indianred;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+a.contrast{
+  color: lavenderblush;
+}
+
+h1{
+  font-size: 32pt;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  color: rgb(100,100,100);
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+h2{
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-size: 24pt;
+  color: gray;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+h3{
+  font-size: 18pt;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  margin-top: 0.75em;
+  margin-bottom: 0.25em;
+}
+
+h4{
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  font-size: 12pt;
+  font-weight: 600;
+  color: rgb(100,100,100);
+  margin-top: 0.5em;
+  margin-bottom: 0.15em;
+  letter-spacing: 0.01em;
+}
+
+hr{
+  margin: 20px 0 20px 0;
+  border: 0;
+  border-top: 1px solid lightgray;
+}
+
+hr.dashed{
+  border-style: dashed;
+}
+
+p{
+  margin: 0.25em 0 1em 0;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+td{
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+.align-content-center{
+  display: flex;
+  align-items: center;
+}
+
+.align-content-center > *{
+  margin-right: 5px;
+}
+
+.center-col{
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.routerview{
+}
+
+.sticky-top{
+  position: sticky;
+  top: 0;
+}

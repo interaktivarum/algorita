@@ -1,0 +1,9 @@
+{
+  "crafts": [
+    {
+      "id": "NameToColor",
+      "name": "Vilken färg är du?",
+      "route": "vilken-farg-ar-du"
+    }
+  ]
+}
