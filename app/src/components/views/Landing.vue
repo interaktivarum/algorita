@@ -6,6 +6,8 @@
         Välkommen till Algorita!
       </h1>
 
+      <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Falgorita.se%2F&width=96&layout=button&action=like&size=small&show_faces=false&share=true&height=65" width="112" height="30" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
       <h3>Rita och pyssla med algoritmer</h3>
 
       Algorita är en webbplats som lär ut om algoritmer genom pyssel och lek.
@@ -13,7 +15,7 @@
       <h3>Vad är en algoritm?</h3>
 
       <p>
-        En algoritm är en uppsättning instruktioner som ska utföras i en särskild ordning. Ungefär som ett recept, när du lagar mat. I själva verket kan algoritmer användas för att beskriva en stor del av vår vardag. <router-link :to="{ name: 'Algorithms', params: {} }">Läs mer om algoritmer</router-link> 
+        En algoritm är en uppsättning instruktioner som ska utföras i en särskild ordning. Ungefär som ett recept, när du lagar mat. I själva verket kan algoritmer användas för att beskriva en stor del av vår vardag. <router-link :to="{ name: 'Algorithms', params: {} }">Läs mer om algoritmer</router-link>
       </p>
 
       <h4>Exempel: {{Greeting.readable}}</h4>
