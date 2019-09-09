@@ -25,26 +25,21 @@
         {{craft.component.description}}
       </p>
 
-      <h3>Innehåll</h3>
-      <component :is="craft.component.components.Description" class="content"></component>
+      <component :is="craft.component">
 
-      <h3>Instruktioner</h3>
-      <p>
-        Utför instruktionerna för hand med papper och penna.
-      </p>
-      <component :is="craft.component.components.Instructions" :data="craft.component.data()"></component>
+        <tabs>
+          <div name="Beskrivning">
+            <component :is="craft.component.components.Description"></component>
+          </div>
+          <div name="Pyssla">
+            <component :is="craft.component.components.Instructions" :data="craft.component.data()"></component>
+          </div>
+          <div name="Kör">
+            <component :is="craft.component.components.Algorithm" :data="craft.component.data()"></component>
+          </div>
+        </tabs>
 
-      <h3>Kör program</h3>
-      <p>
-        Tryck på den gröna flaggan för att starta programmet. Får du samma resultat som när du utförde algoritmens instruktioner för hand?
-      </p>
-      <scratch-embed :id="craft.component.scratchId"></scratch-embed>
-
-      <h3>Visa och hacka programkoden</h3>
-      <p>
-        Programmet ovanför är skapat med Scratch. På webbplatsen för Scratch kan du undersöka hur programmet är skapat och själv prova att göra egna ändringar.
-      </p>
-      <a :href="'https://scratch.mit.edu/projects/'+craft.component.scratchId" target="_blank">Öppna projektet i Scratch</a>, klicka på <strong>Se inuti</strong> för att undersöka hur programmet är skapat.
+      </component>
 
     </div>
   </div>
@@ -56,14 +51,12 @@ import { store } from '@/store';
 
 import Tabs from '@/components/Tabs'
 import Emoji from '@/components/Emoji'
-import ScratchEmbed from '@/components/ScratchEmbed'
 
 export default {
   name: 'Craft',
   components: {
     Tabs,
-    Emoji,
-    ScratchEmbed
+    Emoji
   },
   data () {
     return {
@@ -103,11 +96,6 @@ export default {
 .description{
   background: lightblue;
   padding: 20px;
-}
-
-.content{
-  background: #ddeedd;
-  padding: 10px;
 }
 
 .header{

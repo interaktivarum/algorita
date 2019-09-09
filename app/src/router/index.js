@@ -4,12 +4,17 @@ import Landing from '@/components/views/Landing'
 import Algorithms from '@/components/views/Algorithms'
 import Crafts from '@/components/views/Crafts'
 import Craft from '@/components/views/Craft'
+//import CraftsScratch from '@/components/views/CraftsScratch'
+//import CraftScratch from '@/components/views/CraftScratch'
 import NameToColor from '@/components/crafts/nametocolor/NameToColor'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  },
   routes: [
     {
       path: '/',
@@ -31,10 +36,16 @@ export default new Router({
       name: 'Craft',
       component: Craft
     },
+    ,
+    /*{
+      path: '/scratch',
+      name: 'CraftsScratch',
+      component: CraftsScratch
+    },
     {
-      path: '/farg',
-      name: 'NameToColor',
-      component: NameToColor
-    }
+      path: '/scratch/:craft',
+      name: 'CraftScratch',
+      component: CraftScratch
+    },*/
   ]
 })

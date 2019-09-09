@@ -10,21 +10,31 @@
 
       <h3>Rita och pyssla med algoritmer</h3>
 
-      Algorita är en webbplats som lär ut om algoritmer genom pyssel och lek.
+      <p>
+        Algorita är en webbplats som lär ut om algoritmer genom pyssel och lek. Alla övningar har enkla instruktioner för att utföra algortimernas steg för hand med papper och penna, samt färdiga program byggda i verktyget Scratch.
+      </p>
+
+      <p>
+        Det är även möjligt att undersöka hur varje program är skapat i Scratch samt att själv hacka programmet och göra egna ändringar!
+      </p>
 
       <h3>Vad är en algoritm?</h3>
 
       <p>
-        En algoritm är en uppsättning instruktioner som ska utföras i en särskild ordning. Ungefär som ett recept, när du lagar mat. I själva verket kan algoritmer användas för att beskriva en stor del av vår vardag. <router-link :to="{ name: 'Algorithms', params: {} }">Läs mer om algoritmer</router-link>
+        En algoritm är en uppsättning instruktioner som ska utföras i en särskild ordning. Ungefär som ett recept, när du lagar mat. I själva verket kan algoritmer användas för att beskriva en stor del av vår vardag. <router-link :to="{ name: 'Algorithms', params: {} }">Läs mer om algoritmer</router-link>.
       </p>
 
-      <h4>Exempel: {{Greeting.readable}}</h4>
+      <h4>Exempel: {{Goodmorning.readable}}</h4>
       <p>
-        I <router-link :to="{ name: 'Craft', params: {craft: 'godmorgon-godnatt'} }">{{Greeting.readable}}</router-link> anger du ditt namn och får olika hälsningar tillbaka beroende på tiden på dygnet. Här består algoritmen bland annat av att titta på vad klockan är samt att avgöra i vilket intervall klockslaget befinner sig, för att därefter bestämma vilken hälsningsfras som ska användas. Ungefär som i verkliga livet!
+        I <router-link :to="{ name: 'Craft', params: {craft: 'godmorgon-godnatt'} }">{{Goodmorning.readable}}</router-link> anger du ditt namn och får olika hälsningar tillbaka beroende på tiden på dygnet. Här består algoritmen bland annat av att titta på vad klockan är samt att avgöra i vilket intervall klockslaget befinner sig, för att därefter bestämma vilken hälsningsfras som ska användas. Ungefär som i verkliga livet, fast då sköter vår hjärna det automatiskt och blixtsnabbt!
       </p>
 
-      <component :is="Greeting.components.Algorithm" :data="Greeting.data()" class="example"></component>
+      <p>
+        Testa att först utföra algoritmen för hand med papper och penna, och provkör sedan programmet nedan genom att klicka på den gröna flaggan.
+      </p>
 
+      <component :is="Goodmorning.components.Instructions" :data="Goodmorning.data()" class="example"></component>
+      <scratch-embed :id="Goodmorning.scratchId"></scratch-embed>
 
       <h3>Pyssel och övningar</h3>
 
@@ -38,18 +48,20 @@
 
 import { store } from '@/store';
 import Emoji from '@/components/Emoji'
-import Greeting from '@/components/crafts/greeting/Greeting'
 import CraftsList from '@/components/CraftsList'
+import Goodmorning from '@/components/crafts/goodmorning/Goodmorning'
+import ScratchEmbed from '@/components/ScratchEmbed'
 
 export default {
   name: 'Landing',
   components: {
     Emoji,
-    CraftsList
+    CraftsList,
+    ScratchEmbed
   },
   data () {
     return {
-      Greeting
+      Goodmorning
     }
   },
   computed: {
@@ -74,8 +86,8 @@ export default {
 
 
   .example{
-    background: rgb(230,230,230);
-    padding: 20px;
+    background: rgb(240,240,240);
+    padding: 5px;
   }
 
 </style>

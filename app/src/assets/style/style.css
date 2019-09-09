@@ -24,7 +24,7 @@ html,body{
 }
 
 #app #routerview{
-  margin: 20px;
+  margin: 20px 0px 100px 0px;
   flex: 0 1 100%;
 }
 
@@ -109,7 +109,7 @@ td{
 }
 
 .center-col{
-  width: 600px;
+  width: 800px;
   max-width: 100%;
   margin: 0 auto;
 }
